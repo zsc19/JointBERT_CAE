@@ -18,8 +18,7 @@ cp $ME $MODEL_DIR
 mv $ME_PATH/code.diff $MODEL_DIR/code.diff
 
 CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES \
-# python3 main.py --task ${DATA_ID}\  _slotby2task \
-python3 main.py --task ${DATA_ID}\
+python3 main.py --task ${DATA_ID}\  _slotby2task \
                   --model_type bertseqlabelby2task \
                   --model_dir $MODEL_DIR \
                   --do_train --do_eval --weight_decay $WDECAY --slot_loss_coef $SLOT_LOSS_COEF  --use_crf \
